@@ -1,0 +1,40 @@
+# mod1.py
+def add(a, b):
+    return a + b
+def sub(a, b):
+    return a - b
+
+1. import 모듈명	: 모듈안에 있는 모든 변수/함수/클래스를 사용할 수 있다.
+   모듈명.변수명
+   모듈명.함수명()
+
+   예) >>> import mod1
+       >>> mod1.add(6, 3)	->  9
+       >>> mod1.sub(6, 3)	->  3
+
+2. from 모듈명 import 변수명		: 모듈안에 있는 일부 변수/함수/클래스를
+   from 모듈명 import 함수명1, 함수명2    선택적으로 사용할 수 있다.
+   from 모듈명 import *			: 모듈안에 있는 모든 변수/함수/클래스를
+					  사용할 수 있고, 접두사인 모듈명을 생략!!
+   예) >>> from mod1 import add
+       >>> add(6, 3)		->  9
+       >>> sub(6, 3)		->  Error
+
+       >>> from mod1 import add
+       >>> from mod1 import sub
+       >>> from mod1 import add, sub
+       >>> add(6, 3)		->  9
+       >>> sub(6, 3)		->  3
+
+3. 별칭(Alias)
+   import 모듈명 as 별칭
+   from 모듈명 import 변수명 as 별칭
+   from 모듈명 import 함수명1 as 별칭1, 함수명2 as 별칭2
+
+   예) >>> import mod1 as m
+       >>> m.add(6, 2)	->  8 
+       >>> m.sub(6, 2)	->  4
+
+       >>> from mod1 import add as a, sub as s
+       >>> a(6, 2)	->  8 
+       >>> s(6, 2)	->  
